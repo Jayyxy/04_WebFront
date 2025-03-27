@@ -12,22 +12,28 @@
 
   <main>
     <header class="airbnb-header">
+
+      <section>
         <!-- 헤더 상단 전체: 한 줄 구성 -->
         <div class="header-top">
           
           <!-- 왼쪽: Airbnb 로고 -->
           <div class="logo-area">
             <a href="#">
-              <img src="../images/airbnb-logo.png" alt="Airbnb 로고" class="airbnb-logo">
+              <img src="../images/aribnb/airbnb-logo.png" alt="Airbnb 로고" class="airbnb-logo">
             </a>
           </div>
-      
+          
+          <div class="search-menu">
+            <span>숙소</span>
+            <span>체험</span>
+          </div>
+
           <!-- 가운데: 메뉴 -->
           <nav class="main-nav">
             <ul>
-              <li><a href="#" class="active">숙소</a></li>
-              <li><a href="#">체험</a></li>
-              <li><a href="#">당신의 공간을 에어비앤비하세요</a></li>
+
+              <li><a href="#" >당신의 공간을 에어비앤비하세요</a></li>
             </ul>
           </nav>
       
@@ -40,24 +46,34 @@
             </div>
           </div>
         </div>
-      
+      </section>
+
+      <section>
+
         <!-- 하단 검색창 -->
         <div class="search-bar-wrapper">
+        
           <form action="#" name="search-form" class="search-form">
             <fieldset class="search-fieldset">
               
               <div class="search-section">
                 <label for="location">여행지<br><span>여행지 검색</span></label>
               </div>
+
+              <div>|</div>
       
               <div class="search-section">
                 <label for="checkin">체크인<br><span>날짜 추가</span></label>
               </div>
       
+              <div>|</div>
+
               <div class="search-section">
                 <label for="checkout">체크아웃<br><span>날짜 추가</span></label>
               </div>
-      
+              
+              <div>|</div>
+
               <div class="search-section">
                 <label for="guests">여행자<br><span>게스트 추가</span></label>
               </div>
@@ -65,11 +81,15 @@
               <button type="submit" class="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
+            
       
             </fieldset>
           </form>
+          </div>
         </div>
 
+
+      </section>
 
         <section class="category-bar-section">
             <!-- 왼쪽 화살표 (선택사항) -->
@@ -79,48 +99,49 @@
           
             <!-- 카테고리 스크롤 영역 -->
             <div class="category-bar" id="category-scroll">
+            
+              
               <div class="category-item active">
-                <i class="fa-solid fa-tree-city"></i>
-                <span>한적한 시골</span>
+                <img src="../images/aribnb/free-icon-farm-3038972.png"width=30px height="30px"></img>
+                <div>한적한 시골</div>
               </div>
-              <div class="category-item">
-                <i class="fa-solid fa-star"></i>
-                <span>컬쳐 아이콘</span>
-              </div>
-              <div class="category-item">
-                <i class="fa-solid fa-image"></i>
-                <span>최고의 전망</span>
-              </div>
-              <div class="category-item">
-                <i class="fa-solid fa-landmark"></i>
-                <span>한옥</span>
-              </div>
-              <div class="category-item">
-                <i class="fa-solid fa-house"></i>
-                <span>저택</span>
-              </div>
-              <div class="category-item">
-                <i class="fa-solid fa-windmill"></i>
-                <span>풍차</span>
-              </div>
-              <div class="category-item">
-                <i class="fa-solid fa-water"></i>
-                <span>멋진 수영장</span>
-              </div>
-              <div class="category-item">
-                <i class="fa-solid fa-umbrella-beach"></i>
-                <span>해변 바로 앞</span>
-              </div>
-              <div class="category-item">
-                <i class="fa-solid fa-bed"></i>
-                <span>방</span>
-              </div>
-              <div class="category-item">
-                <i class="fa-solid fa-ufo"></i>
-                <span>기상천외한 숙소</span>
-              </div>
-            </div>
+        
+
           
+              <div class="category-item">
+                <img src="../images/aribnb/free-icon-favorite-985760.png"width=30px height="30px"></img>
+                <div>컬쳐 아이콘</div>
+              </div>
+         
+
+       
+              <div class="category-item">
+                <img src="../images/aribnb/free-icon-view-1701629.png"width=30px height="30px"></img>
+                <div>최고의 전망</div>
+              </div>
+          
+
+  
+              <div class="category-item">
+                <img src="../images/aribnb/free-icon-hanok-4498251.png"width=30px height="30px"></img>
+                <div>한옥</div>
+              </div>
+
+      
+              <div class="category-item">
+                <img src="../images/aribnb/free-icon-camping-tent-5116353.png"width=30px height="30px"></img>
+                <div>A자형 저택</div>
+              </div>
+
+
+              <div class="category-item">
+                <img src="../images/aribnb/free-icon-grand-piano-106069.png"width=30px height="30px"></img>
+                <div>그랜드 피아노</div>
+              </div>
+
+            </div>
+        
+
             <!-- 오른쪽 화살표 -->
             <button class="scroll-btn right" onclick="scrollNext()">
               <i class="fa-solid fa-chevron-right"></i>
@@ -151,7 +172,9 @@
               <i class="fa-regular fa-heart"></i>
             </button>
       
-            <div class="dot-indicator">● ● ●</div>
+            <div class="dot-indicator">● ● ●
+              
+            </div>
           </div>
       
           <div class="info-box">
@@ -251,10 +274,7 @@
  
               <button class="like-btn">
                 <i class="fa-regular fa-heart"></i>
-              </button>
-        
-               <!-- 게스트 선호 뱃지 (일부 적용) -->
-              <span class="badge"></span>
+              </button>             
       
               <div class="dot-indicator">● ● ●</div>
             </div>
@@ -294,16 +314,68 @@
               <p>69km 거리</p>
               <p>4월 14일~19일</p>
               <p><strong>₩136,941</strong> /박</p>
-              <p class="review"></p>
+              <p class="review">게스트 한마디 “호스트님도 무척 친절하셨습니다”</p>
         </div>
         </div>
 
+        <div class="room-card">
+          <div class="image-box">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwMDA1OTg0NTI1MDcyNzg5MA%3D%3D/original/580880b6-ac1f-41af-95d9-af72e4fcf4fd.jpeg?im_w=720" alt="숙소 이미지">
+
+            <button class="like-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+    
+    
+            <div class="dot-indicator">● ● ●</div>
+          </div>
+      
+          <div class="info-box">
+            <div class="location-line">
+              <span><strong>한국 가평군</strong></span>
+              <span class="rating"></span>
+              
+            </div>
+            <p>39km 거리</p>
+            <p>4월 1일~6일</p>
+            <p><strong>₩341,280</strong> /박</p>
+            <p class="review"></p>
+      </div>
+      </div>
+
+      <div class="room-card">
+        <div class="image-box">
+          <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIwOTEzMDg3NTE0MzY4MzkwMw%3D%3D/original/48685d67-fc39-4b74-8615-e07763735058.jpeg?im_w=720" alt="숙소 이미지">
+
+          <button class="like-btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+    
+           <!-- 게스트 선호 뱃지 (일부 적용) -->
+          <span class="badge">게스트 선호</span>
+  
+          <div class="dot-indicator">● ● ●</div>
+        </div>
+    
+        <div class="info-box">
+          <div class="location-line">
+            <span><strong>한국 Jipyeong-myeon, Yangpyeong-gun</strong></span>
+            <span class="rating">★ 4.92</span>
+            
+          </div>
+          <p>57km 거리</p>
+          <p>4월 6일~11일</p>
+          <p><strong>₩300,130</strong> /박</p>
+          <p class="review"></p>
+    </div>
+    </div>
 
 
     </section>
             
  
   </main>
+
   <footer class="footer-bar">
     <div class="footer-left">
       <p>© 2025 Airbnb, Inc.</p>

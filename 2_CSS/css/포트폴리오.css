@@ -17,14 +17,17 @@
   /* 헤더 상단 정렬 */
   .airbnb-header .header-top {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    height: 50px;
   }
   
   /* 로고 */
   .logo-area img.airbnb-logo {
     height: 32px;
+    flex-basis: 50%;
   }
   
   /* 네비게이션 메뉴 */
@@ -32,6 +35,7 @@
     display: flex;
     list-style: none;
     gap: 32px;
+    
   }
   
   .main-nav a {
@@ -40,10 +44,7 @@
     font-weight: 500;
   }
   
-  .main-nav a.active {
-    color: black;
-    font-weight: 700;
-  }
+  
   
   /* 유저 메뉴 */
   .user-menu {
@@ -62,6 +63,15 @@
   }
   
   /* 검색창 */
+  .search-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 32px;
+    flex-basis: 50%;
+  }
+
+
   .search-bar-wrapper {
     display: flex;
     justify-content: center;
@@ -118,6 +128,8 @@
 
 .category-bar {
   display: flex;
+  flex-direction: row ;
+  justify-content: space-between;
   overflow-x: auto;
   scroll-behavior: smooth;
   gap: 24px;
@@ -130,10 +142,10 @@
 }
 
 .category-item {
-  min-width: 80px;
+  min-width: 20px;
   text-align: center;
   color: #717171;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -189,16 +201,18 @@
   }
   
   .image-box img {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
     display: block;
+    
   }
   
   /* 하트 버튼 */
   .like-btn {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 10%;
+    right: 10%;
     background: none;
     border: none;
     font-size: 20px;
