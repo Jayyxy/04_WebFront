@@ -1,11 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>포트폴리오_</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포트폴리오_에어비앤비</title>
+
+  <link rel="stylesheet" href="css/포트폴리오.css">
+  <script src="https://kit.fontawesome.com/07b74030d9.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+  <main>
+    <header class="airbnb-header">
+        <!-- 헤더 상단 전체: 한 줄 구성 -->
+        <div class="header-top">
+          
+          <!-- 왼쪽: Airbnb 로고 -->
+          <div class="logo-area">
+            <a href="#">
+              <img src="../images/airbnb-logo.png" alt="Airbnb 로고" class="airbnb-logo">
+            </a>
+          </div>
+      
+          <!-- 가운데: 메뉴 -->
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#" class="active">숙소</a></li>
+              <li><a href="#">체험</a></li>
+              <li><a href="#">당신의 공간을 에어비앤비하세요</a></li>
+            </ul>
+          </nav>
+      
+          <!-- 우측 유저 메뉴 -->
+          <div class="user-menu">
+            <i class="fa-solid fa-globe"></i>
+            <div class="menu-box">
+              <i class="fa-solid fa-bars"></i>
+              <i class="fa-solid fa-user-circle"></i>
+            </div>
+          </div>
+        </div>
+      
+        <!-- 하단 검색창 -->
+        <div class="search-bar-wrapper">
+          <form action="#" name="search-form" class="search-form">
+            <fieldset class="search-fieldset">
+              
+              <div class="search-section">
+                <label for="location">여행지<br><span>여행지 검색</span></label>
+              </div>
+      
+              <div class="search-section">
+                <label for="checkin">체크인<br><span>날짜 추가</span></label>
+              </div>
+      
+              <div class="search-section">
+                <label for="checkout">체크아웃<br><span>날짜 추가</span></label>
+              </div>
+      
+              <div class="search-section">
+                <label for="guests">여행자<br><span>게스트 추가</span></label>
+              </div>
+      
+              <button type="submit" class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+      
+            </fieldset>
+          </form>
+        </div>
+
+
+        <section class="category-bar-section">
+            <!-- 왼쪽 화살표 (선택사항) -->
+            <button class="scroll-btn left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+          
+            <!-- 카테고리 스크롤 영역 -->
+            <div class="category-bar" id="category-scroll">
+              <div class="category-item active">
+                <i class="fa-solid fa-tree-city"></i>
+                <span>한적한 시골</span>
+              </div>
+              <div class="category-item">
+                <i class="fa-solid fa-star"></i>
+                <span>컬쳐 아이콘</span>
+              </div>
+              <div class="category-item">
+                <i class="fa-solid fa-image"></i>
+                <span>최고의 전망</span>
+              </div>
+              <div class="category-item">
+                <i class="fa-solid fa-landmark"></i>
+                <span>한옥</span>
+              </div>
+              <div class="category-item">
+                <i class="fa-solid fa-house"></i>
+                <span>저택</span>
+              </div>
+              <div class="category-item">
+                <i class="fa-solid fa-windmill"></i>
+                <span>풍차</span>
+              </div>
+              <div class="category-item">
+                <i class="fa-solid fa-water"></i>
+                <span>멋진 수영장</span>
+              </div>
+              <div class="category-item">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <span>해변 바로 앞</span>
+              </div>
+              <div class="category-item">
+                <i class="fa-solid fa-bed"></i>
+                <span>방</span>
+              </div>
+              <div class="category-item">
+                <i class="fa-solid fa-ufo"></i>
+                <span>기상천외한 숙소</span>
+              </div>
+            </div>
+          
+            <!-- 오른쪽 화살표 -->
+            <button class="scroll-btn right" onclick="scrollNext()">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          
+            <!-- 필터 버튼 -->
+            <button class="filter-btn">
+              <i class="fa-solid fa-sliders"></i> 필터
+            </button>
+          </section>
+          
+      </header>
+      
+      
+
+    <hr>
+
+    <!-- 숙소 리스트 -->
+
+    <section class="card-list">
+        <!-- 카드 1 -->
+        <div class="room-card">
+
+          <div class="image-box">
+            <img src="https://a0.muscache.com/im/pictures/aa715257-38ff-45ff-8bb7-3a7e321cf385.jpg?im_w=720" alt="숙소 이미지">
+            
+            <button class="like-btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+      
+            <div class="dot-indicator">● ● ●</div>
+          </div>
+      
+          <div class="info-box">
+            <div class="location-line">
+              <span><strong>한국 Hwachon-myeon,Hongcheon-gun</strong></span>
+              <span class="rating">★ 4.89</span>
+            </div>
+            <p>86km 거리</p>
+            <p>4월 6일~11일</p>
+            <p><strong>₩11,118</strong> /박</p>
     
+          </div>
+        </div>
+        <!-- 카드 2 -->
+        <div class="room-card">
+            <div class="image-box">
+              <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA4MjIxNDIwMDM5NDI1NzcxOA==/original/9cb05bde-0f95-4895-ae96-1786cc4e737d.jpeg?im_w=720" alt="숙소 이미지">
+              
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+        
+              <!-- 게스트 선호 뱃지 (일부 적용) -->
+              <span class="badge">게스트 선호</span>
+        
+              <div class="dot-indicator">● ● ●</div>
+            </div>
+        
+            <div class="info-box">
+              <div class="location-line">
+                <span><strong>한국 Yesan-gun</strong></span>
+                <span class="rating">★ 4.92</span>
+              </div>
+              <p>95km 거리</p>
+              <p>4월 20일~25일</p>
+              <p><strong>₩216,824</strong> /박</p>
+              <p class="review">게스트 한마디 “전반적으로 모두 다 좋았습니다.”</p>
+            </div>
+          </div>
+
+          <!-- 카드 3 -->
+        <div class="room-card">
+            <div class="image-box">
+              <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MzA4ODk5NzA%3D/original/091c1384-9ddb-4392-850e-db3bf7fc4c32.jpeg?im_w=720" alt="숙소 이미지">
+ 
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+        
+               <!-- 게스트 선호 뱃지 (일부 적용) -->
+              <span class="badge">게스트 선호</span>
+      
+              <div class="dot-indicator">● ● ●</div>
+            </div>
+        
+            <div class="info-box">
+              <div class="location-line">
+                <span><strong>한국 Hongcheon-gun</strong></span>
+                <span class="rating">★ 4.89</span>
+              </div>
+              <p>60km 거리</p>
+              <p>4월 20일~25일</p>
+              <p><strong>₩136,941</strong> /박</p>
+              <p class="review">게스트 한마디 “깔끔하고 아늑하고 다 좋았어요”</p>
+        </div>
+        </div>
+        
+        <div class="room-card">
+            <div class="image-box">
+              <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTAzMjQyMDU0Mjk3Mzc4MzQ5Mw%3D%3D/original/3ab818b4-9d07-44c9-b733-6f7c10ccc523.jpeg?im_w=720" alt="숙소 이미지">
+ 
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+        
+               <!-- 게스트 선호 뱃지 (일부 적용) -->
+              <span class="badge">게스트 선호</span>
+      
+              <div class="dot-indicator">● ● ●</div>
+            </div>
+        
+            <div class="info-box">
+              <div class="location-line">
+                <span><strong>한국 가평군</strong></span>
+                <span class="rating">★ 5.0</span>
+              </div>
+              <p>44km 거리</p>
+              <p>4월 20일~25일</p>
+              <p><strong>₩191,718</strong> /박</p>
+              <p class="review">" "</p>
+        </div>
+        </div>
+
+        <div class="room-card">
+            <div class="image-box">
+              <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1054423266192008941/original/4d679ace-8a31-4799-83a1-9a17d68b48e0.jpeg?im_w=720" alt="숙소 이미지">
+ 
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+        
+               <!-- 게스트 선호 뱃지 (일부 적용) -->
+              <span class="badge"></span>
+      
+              <div class="dot-indicator">● ● ●</div>
+            </div>
+        
+            <div class="info-box">
+              <div class="location-line">
+                <span><strong>한국 Hongcheon-gun</strong></span>
+                
+              </div>
+              <p>68km 거리</p>
+              <p>5월 14일~19일</p>
+              <p><strong>₩878,706</strong> /박</p>
+              <p class="review"></p>
+        </div>
+        </div>
+
+        <div class="room-card">
+            <div class="image-box">
+              <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTI3MjMwNzgzNTU1NDM3NTY0Mw%3D%3D/original/2d98c9cf-d3df-4d9b-a2c5-9ca0df8009e8.jpeg?im_w=720" alt="숙소 이미지">
+ 
+              <button class="like-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+        
+               <!-- 게스트 선호 뱃지 (일부 적용) -->
+              <span class="badge">게스트 선호</span>
+      
+              <div class="dot-indicator">● ● ●</div>
+            </div>
+        
+            <div class="info-box">
+              <div class="location-line">
+                <span><strong>한국 Yeoju-si</strong></span>
+                <span class="rating">★ 4.98</span>
+                
+              </div>
+              <p>69km 거리</p>
+              <p>4월 14일~19일</p>
+              <p><strong>₩136,941</strong> /박</p>
+              <p class="review"></p>
+        </div>
+        </div>
+
+
+
+    </section>
+            
+ 
+  </main>
+  <footer class="footer-bar">
+    <div class="footer-left">
+      <p>© 2025 Airbnb, Inc.</p>
+      <a href="#">개인정보 처리방침</a>
+      <span>|</span>
+      <a href="#">쿠키 정책</a>
+      <span>|</span>
+      <a href="#">이용약관</a>
+      <span>|</span>
+      <a href="#">사이트맵</a>
+      <span>|</span>
+      <a href="#">회사 세부정보</a>
+    </div>
+  
+    <div class="footer-right">
+      <a href="#"><i class="fa-solid fa-globe"></i> 한국어 (KR)</a>
+      <a href="#">₩ KRW</a>
+      <a href="#">지원 및 참고 자료</a>
+    </div>
+  </footer>
+  
+
 </body>
 </html>

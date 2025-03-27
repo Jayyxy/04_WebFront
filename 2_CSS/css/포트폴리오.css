@@ -1,0 +1,287 @@
+/* header  */
+
+/* 전체 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 폰트 & 본문 설정 */
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #fff;
+    color: #222;
+  }
+  
+  /* 헤더 상단 정렬 */
+  .airbnb-header .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  /* 로고 */
+  .logo-area img.airbnb-logo {
+    height: 32px;
+  }
+  
+  /* 네비게이션 메뉴 */
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #717171;
+    font-weight: 500;
+  }
+  
+  .main-nav a.active {
+    color: black;
+    font-weight: 700;
+  }
+  
+  /* 유저 메뉴 */
+  .user-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .menu-box {
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* 검색창 */
+  .search-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .search-fieldset {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 40px;
+    padding: 16px;
+    gap: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+  
+  /* 각 항목 (여행지, 체크인 등) */
+  .search-section label {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .search-section span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #717171;
+  }
+  
+  /* 검색 버튼 */
+  .search-btn {
+    background-color: #FF385C;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+
+  .category-bar-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+
+.category-bar {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 24px;
+  padding: 10px 0;
+  flex: 1;
+}
+
+.category-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.category-item {
+  min-width: 80px;
+  text-align: center;
+  color: #717171;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.category-item i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.category-item.active {
+  color: black;
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.scroll-btn {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.filter-btn {
+  margin-left: 12px;
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/*본문 숙소 카드 구역 디자인 */
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+    padding: 40px;
+  }
+  
+  .room-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .image-box {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* 하트 버튼 */
+  .like-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+  }
+  
+  /* 게스트 선호 뱃지 */
+  .badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* 이미지 아래 점점점 (슬라이드 인디케이터처럼) */
+  .dot-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 10px;
+    text-shadow: 0 0 5px black;
+  }
+  
+  /* 숙소 정보 */
+  .info-box {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #222;
+  }
+  
+  .location-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rating {
+    font-weight: bold;
+  }
+  
+  .review {
+    color: #717171;
+    font-style: italic;
+    font-size: 13px;
+  }
+  
+/* 하단 메뉴 바 */
+.footer-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    font-size: 14px;
+    color: #717171;
+    border-top: 1px solid #ddd;
+    background-color: #f7f7f7;
+  }
+  
+  .footer-bar a {
+    color: #717171;
+    text-decoration: none;
+    margin: 0 6px;
+  }
+  
+  .footer-bar a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-left,
+  .footer-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
